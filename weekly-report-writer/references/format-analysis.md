@@ -214,7 +214,7 @@
 
 ### 进度记录格式
 
-存储在 `memory/weekly-progress-YYYY-MM-DD.md`：
+存储在项目根目录下的 `memory/weekly-progress-YYYY-MM-DD.md`：
 
 ```markdown
 # 周进度记录 (2026-03-16 to 2026-03-20)

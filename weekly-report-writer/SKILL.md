@@ -5,13 +5,19 @@ description: Transform casual progress notes into professionally formatted weekl
 
 # Weekly Report Writer
 
+## Storage Convention
+
+**All `memory/` paths in this skill are relative to the current session's working directory (project root), NOT relative to this skill's base directory.**
+
+For example, if the session working directory is `~/weekly`, then `memory/weekly-progress-YYYY-MM-DD.md` resolves to `~/weekly/memory/weekly-progress-YYYY-MM-DD.md`.
+
 ## Overview
 
 This skill has two modes of operation:
 
 ### Mode 1: Real-time Progress Tracking (Throughout the Week)
 - **You provide**: Brief progress updates whenever something noteworthy happens
-- **Skill does**: Accumulates and organizes updates in persistent memory (`memory/weekly-progress-YYYY-MM-DD.md`)
+- **Skill does**: Accumulates and organizes updates in persistent memory (`memory/weekly-progress-YYYY-MM-DD.md` under project root)
 - **Benefit**: No need to collect everything at the end of the week
 
 ### Mode 2: Automated Report Generation (On Report Day)
