@@ -193,7 +193,7 @@ PID=$(pgrep -f "aiperf" | head -1); if [ -n "$PID" ]; then kill $PID; sleep 2; k
 ```bash
 kubectl cp <namespace>/<pod>:<remote_path> <local_path>
 ```
-本地保存路径：`/data/shiyuan/workspace/bench_results/`
+本地保存路径：`~/bench_results/`
 
 ### 8. Profile Decode 阶段
 
@@ -244,7 +244,7 @@ PID=$(pgrep -f "aiperf" | head -1); if [ -n "$PID" ]; then kill $PID; sleep 2; k
 ```
 
 #### 8g. 下载 decode trace 到本地
-同 7g，下载到 `/data/shiyuan/workspace/bench_results/`
+同 7g，下载到 `~/bench_results/`
 
 ### 9. 停止 sglang
 Profile 完成后，**自动停止 sglang 服务**：
@@ -255,8 +255,8 @@ pkill -f "sglang.launch_server"
 ### 10. 输出结果
 告知用户本地文件路径，格式如：
 ```
-Prefill trace: /data/shiyuan/workspace/bench_results/<MODEL_NAME>_prefill_<timestamp>.trace.json.gz
-Decode trace:  /data/shiyuan/workspace/bench_results/<MODEL_NAME>_decode_<timestamp>.trace.json.gz
+Prefill trace: ~/bench_results/<MODEL_NAME>_prefill_<timestamp>.trace.json.gz
+Decode trace:  ~/bench_results/<MODEL_NAME>_decode_<timestamp>.trace.json.gz
 ```
 
 ## 注意事项
